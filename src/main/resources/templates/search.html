@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<head>
+    <title>商品列表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- bootstrap-css -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" >
+    <!-- //bootstrap-css -->
+    <!-- Custom CSS -->
+    <link th:href="@{/css/style.css}" rel='stylesheet' type='text/css' />
+    <link th:href="@{/css/style-responsive.css}" rel="stylesheet"/>
+    <!-- font CSS -->
+    <link href='@/http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" th:href="@{/css/font.css}" type="text/css"/>
+    <link th:href="@{/css/font-awesome.css}" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <script src="js/jquery2.0.3.min.js"></script>
+</head>
+<body>
+<section id="container">
+    <!--header start-->
+    <header class="header fixed-top clearfix">
+        <!--logo start-->
+        <div class="brand">
+
+            <a href="index.html" class="logo">
+                VISITORS
+            </a>
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars"></div>
+            </div>
+        </div>
+        <!--logo end-->
+
+        <div class="nav notify-row" id="top_menu">
+            <!--  notification start -->
+            <ul class="nav top-menu">
+                <!-- settings start -->
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <i class="fa fa-tasks"></i>
+                        <span class="badge bg-success">8</span>
+                    </a>
+                    <ul class="dropdown-menu extended tasks-bar">
+                        <li>
+                            <p class="">You have 8 pending tasks</p>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="task-info clearfix">
+                                    <div class="desc pull-left">
+                                        <h5>Target Sell</h5>
+                                        <p>25% , Deadline  12 June’13</p>
+                                    </div>
+                                    <span class="notification-pie-chart pull-right" data-percent="45">
+                            <span class="percent"></span>
+                            </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="task-info clearfix">
+                                    <div class="desc pull-left">
+                                        <h5>Product Delivery</h5>
+                                        <p>45% , Deadline  12 June’13</p>
+                                    </div>
+                                    <span class="notification-pie-chart pull-right" data-percent="78">
+                            <span class="percent"></span>
+                            </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="task-info clearfix">
+                                    <div class="desc pull-left">
+                                        <h5>Payment collection</h5>
+                                        <p>87% , Deadline  12 June’13</p>
+                                    </div>
+                                    <span class="notification-pie-chart pull-right" data-percent="60">
+                            <span class="percent"></span>
+                            </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="task-info clearfix">
+                                    <div class="desc pull-left">
+                                        <h5>Target Sell</h5>
+                                        <p>33% , Deadline  12 June’13</p>
+                                    </div>
+                                    <span class="notification-pie-chart pull-right" data-percent="90">
+                            <span class="percent"></span>
+                            </span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="external">
+                            <a href="#">See All Tasks</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- settings end -->
+                <!-- inbox dropdown start-->
+                <li id="header_inbox_bar" class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="badge bg-important">4</span>
+                    </a>
+                    <ul class="dropdown-menu extended inbox">
+                        <li>
+                            <p class="red">You have 4 Mails</p>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="photo"><img alt="avatar" src="images/3.png"></span>
+                                <span class="subject">
+                                <span class="from">Jonathan Smith</span>
+                                <span class="time">Just now</span>
+                                </span>
+                                <span class="message">
+                                    Hello, this is an example msg.
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="photo"><img alt="avatar" src="images/1.png"></span>
+                                <span class="subject">
+                                <span class="from">Jane Doe</span>
+                                <span class="time">2 min ago</span>
+                                </span>
+                                <span class="message">
+                                    Nice admin template
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="photo"><img alt="avatar" src="images/3.png"></span>
+                                <span class="subject">
+                                <span class="from">Tasi sam</span>
+                                <span class="time">2 days ago</span>
+                                </span>
+                                <span class="message">
+                                    This is an example msg.
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="photo"><img alt="avatar" src="images/2.png"></span>
+                                <span class="subject">
+                                <span class="from">Mr. Perfect</span>
+                                <span class="time">2 hour ago</span>
+                                </span>
+                                <span class="message">
+                                    Hi there, its a test
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">See all messages</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- inbox dropdown end -->
+                <!-- notification dropdown start-->
+                <li id="header_notification_bar" class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+
+                        <i class="fa fa-bell-o"></i>
+                        <span class="badge bg-warning">3</span>
+                    </a>
+                    <ul class="dropdown-menu extended notification">
+                        <li>
+                            <p>Notifications</p>
+                        </li>
+                        <li>
+                            <div class="alert alert-info clearfix">
+                                <span class="alert-icon"><i class="fa fa-bolt"></i></span>
+                                <div class="noti-info">
+                                    <a href="#"> Server #1 overloaded.</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="alert alert-danger clearfix">
+                                <span class="alert-icon"><i class="fa fa-bolt"></i></span>
+                                <div class="noti-info">
+                                    <a href="#"> Server #2 overloaded.</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="alert alert-success clearfix">
+                                <span class="alert-icon"><i class="fa fa-bolt"></i></span>
+                                <div class="noti-info">
+                                    <a href="#"> Server #3 overloaded.</a>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </li>
+                <!-- notification dropdown end -->
+            </ul>
+            <!--  notification end -->
+        </div>
+        <div class="top-nav clearfix">
+            <!--search & user info start-->
+            <ul class="nav pull-right top-menu">
+                <li>
+                    <input type="text" class="form-control search" placeholder=" Search">
+                </li>
+                <!-- user login dropdown start-->
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <img alt="" src="images/2.png">
+                        <span class="username">[[${session.loginUser}]]</span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu extended logout">
+                        <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
+                        <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                        <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
+                    </ul>
+                </li>
+                <!-- user login dropdown end -->
+
+            </ul>
+            <!--search & user info end-->
+        </div>
+    </header>
+    <!--header end-->
+    <!--sidebar start-->
+    <aside>
+        <div id="sidebar" class="nav-collapse">
+            <!-- sidebar menu start-->
+            <div class="leftside-navigation">
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <li class="sub-menu">
+                        <a class="active" href="javascript:;">
+                            <i class="fa fa-th"></i>
+                            <span>阿锋的超市系统</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a th:href="@{/goodsArr}">库存管理</a></li>
+                            <li class="active"><a th:href="@{/waresMap}">商品管理</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="login.html">
+                            <i class="fa fa-user"></i>
+                            <span>登录页面</span>
+                        </a>
+                    </li>
+                </ul>              </div>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+    <!--sidebar end-->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="table-agile-info">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        商品管理
+                    </div>
+                    <div class="row w3-res-tb" style="display: flex">
+                        <div class="col-sm-5 m-b-xs"style="position:relative; left: 520px;">
+                            <button class="btn btn-sm btn-default" id="addBtn" >添加商品</button>
+                        </div>
+
+                        <div class="input-group"  style="position: relative; right: -400px;">
+                            <input type="text" class="input-sm form-control" placeholder="Search"><span class="input-group-btn">
+            <button class="btn btn-sm btn-default" type="button">查询</button>
+          </span>
+                        </div>
+                    </div>
+                    <div id="addForm" style="display: none; position:relative; left: 200px;">
+                        <form th:action="@{/wares}" method="post" class="form-inline">
+                            <div class="form-group">
+                                <label for="exampleInputName2">商品名称</label>
+                                <input name="name" type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                            </div>
+                            <div class="form-group">
+                                <label >价格</label>
+                                <input name="price" type="text" class="form-control" >
+                            </div>
+                            <div class="form-group">
+                                <label >类型</label>
+                                <input name="type" type="text"  class="form-control" id="exampleInputEmail3" >
+                            </div>
+                            <button type="submit" class="btn btn-default">提交</button>
+                        </form>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-striped b-t b-light">
+                            <thead>
+                            <tr>
+                                <!--            <th style="width:20px;">-->
+                                <!--              <label class="i-checks m-b-none">-->
+                                <!--                <input type="checkbox"><i></i>-->
+                                <!--              </label>-->
+                                <!--            </th>-->
+                                <th>商品名称</th>
+                                <th>价格</th>
+                                <th>类型</th>
+                                <th style="width:40px;"></th>
+                                <th style="width:40px;"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="wares:${waresMap}">
+                                <td>[[${wares.name}]]</td>
+                                <td>[[${wares.price}]]</td>
+                                <td>[[${wares.type}]]</td>
+                                <td>
+                                    <a th:href="@{/}+${wares.getId()}" class="active" ui-toggle-class=""><i class="fa fa-pencil text-success text-active "></i></a>
+                                </td>
+                                <td>
+                                    <a th:href="@{/del}+${wares.getId()}" class="active" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <footer class="panel-footer">
+                        <div class="row">
+
+                            <div class="col-sm-5 text-center">
+                                <small class="text-muted inline m-t-sm m-b-sm">showing 20-30 of 50 items</small>
+                            </div>
+                            <div class="col-sm-7 text-right text-center-xs">
+                                <ul class="pagination pagination-sm m-t-none m-b-none">
+                                    <li><a href=""><i class="fa fa-check-circle"></i></a></li>
+                                    <li><a href="">1</a></li>
+                                    <li><a href="">2</a></li>
+                                    <li><a href="">3</a></li>
+                                    <li><a href="">4</a></li>
+                                    <li><a href=""><i class="fa fa-chevron-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </section>
+        <!-- footer -->
+        <!--		  <div class="footer">-->
+        <!--			<div class="wthree-copyright">-->
+        <!--			  <p>Copyright &copy; 2017.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>-->
+        <!--			</div>-->
+        <!--		  </div>-->
+        <!-- / footer -->
+    </section>
+
+    <!--main content end-->
+</section>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/jquery.slimscroll.js"></script>
+<script src="js/jquery.nicescroll.js"></script>
+<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
+<script src="js/jquery.scrollTo.js"></script>
+<script>
+
+
+</script>
+</body>
+</html>

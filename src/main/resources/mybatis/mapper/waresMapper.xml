@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.springbootweb.mapper.WaresMappper">
+
+    <select id="queryWaresList" resultType="Wares">
+       select * from ware;
+    </select>
+
+    <select id="queryWaresById" resultType="Wares">
+        select * from ware where id=#{id}
+    </select>
+
+    <select id="queryWaresByType" resultType="Wares">
+        select * from ware where type=#{type}
+    </select>
+
+    <select id="queryWaresByName" resultType="Wares">
+       select * from ware where username=#{username};
+    </select>
+
+    <select id="addWares" parameterType="Wares">
+        insert into ware (id ,name,price,type) values (#{id},#{name},#{price},#{type})
+    </select>
+
+    <select id="updateWares" parameterType="Wares">
+        update ware set name=#{name},price=#{price},type=#{type} where id=#{id}
+    </select>
+
+    <select id="delete" parameterType="int">
+        delete  from ware where id=#{id}
+    </select>
+</mapper>
